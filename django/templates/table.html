@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>table</title>
+    </head>
+    <body>
+        <form marhod="GET">
+            <input type="number" name='t' required>
+            <input type="submit" value="ok">
+
+        </form>
+        <h1>Ans is:</h1>
+        {% for value in result.values %}
+        
+        <h1> {{ value }}</h1>
+        {% endfor %}
+    </body>
+</html>
