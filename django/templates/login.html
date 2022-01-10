@@ -1,0 +1,20 @@
+{% extends 'master.html' %}
+{% block content %}
+
+<body  class="loginbody">
+	  <div class="login1">
+		<h1 class="loginh1">Login here</h1><br>
+		<form method="POST">
+			{% csrf_token %}
+		<p>Username</p>
+		<input type="text" name="us" placeholder="Enter Username" required>
+		<p>Password</p>
+		<input type="text" name="password" placeholder="Enter Password" required><br><br>
+		<input type="submit" name="" value="login" > 
+		<br>
+
+
+	</form>
+</div>
+
+{% endblock %}
