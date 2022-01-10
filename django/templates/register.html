@@ -1,0 +1,27 @@
+{% extends 'master.html' %}
+{% block content %}
+  
+    <body class=registerbody>
+        <h1 class="loginh11"> signup </h1>
+        <div class="login11">
+        <form method="POST">
+            {% csrf_token %}
+            
+            <label>enter name:</label><br>
+            <input type="text" placeholder="enter name" name="name"><br>
+
+            <label>enter email:</label><br>
+            <input type="email" placeholder="enter email" name="email"><br>
+
+            <label>enter number:</label><br>
+            <input type="number" placeholder="enter number" name="phn"><br>
+            
+            <label>enter pass:</label><br>
+            <input type="text" placeholder="enter pass" name="pass"><br>
+           
+            <input type="submit" value="submit" >
+            
+        </form>
+        </div>
+        {% endblock %}
+    
