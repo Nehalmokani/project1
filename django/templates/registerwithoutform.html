@@ -1,0 +1,108 @@
+<html>
+    <head>
+        <style>
+            
+        .registerbody
+        {
+		
+		    padding-top: 60px;
+            padding-bottom: 40px;
+            background-image: url(https://i.postimg.cc/dQZssk2d/1.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+    
+        background-position: center;
+        font-family: sans-serif;
+        }
+        label
+      {
+    color:crimson;
+    margin: 0px;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 21px;
+
+     }
+
+     .login1
+{
+    width: 320px;
+    height: 420px;
+    border-style: solid;
+    color: #f1e48b;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform:translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 50px 60px;
+}
+.loginh1
+{
+    color:blue;
+    margin: 0 0 20 0px;
+    padding: 0 10 5 10px;
+    text-align: center;
+    font-size: 28px;
+
+}
+     .login1 input
+
+{
+    width: 100px;
+    margin-bottom: 10px;
+}
+.login1 input[type="text"], input[type="number"], input[type='email']
+{
+    border:none;
+    border-bottom: 2px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    width: 200px;
+    color: #fff;
+    font-size: 16px;
+}
+.login1 input[type="submit"]
+{
+    border:none;
+    outline: none;
+    height: 40px;
+    width: 200px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.login1 input[type="submit"]:hover
+
+ {
+     cursor: pointer;
+     background: #ffc107;
+     color: #000;
+ }
+
+        </style>
+    </head>
+    <body class=registerbody>
+        <div class="login1">
+        <form method="POST">
+            {% csrf_token %}
+            <h1 class="loginh1"> signup </h1>
+            <label>enter name:</label>
+            <input type="text" placeholder="enter name" name="name"><br>
+
+            <label>enter email:</label>
+            <input type="email" placeholder="enter email" name="email"><br>
+
+            <label>enter number:</label>
+            <input type="number" placeholder="enter number" name="phn"><br>
+            
+            <label>enter pass:</label>
+            <input type="text" placeholder="enter pass" name="pass"><br>
+           
+            <input type="submit" value="submit">
+        </form>
+        </div>
+    </body>
+</html>
