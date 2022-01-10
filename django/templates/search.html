@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <body>
+            <form method="GET">
+                <input type="text" name="search">
+
+            </form>
+            {% for search in b1%}
+            <h3>
+                <li>
+               <p> {{search.bookname1}} | {{search.des1}} </p>
+                </li>
+            </h3>
+            {% endfor %}
+        </body>
+    </head>
+</html>
