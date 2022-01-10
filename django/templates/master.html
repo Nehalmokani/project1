@@ -1,0 +1,61 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>master</title>
+        <link rel="stylesheet" href="{% static '/style.css'%}">
+        
+        </head>
+        <body style="background-image: url('{% static 'image/w4.jpg'%}')">
+            
+            <form method="GET">
+            <div class="fixed-header">
+                <div class="container">
+                    <nav>
+                        <a href="{% url 'master'%}">Home</a>
+                        <a href="{% url 'about'%}">About</a>
+                        <a href="{% url 'services'%}">Services</a>
+                        <a href="{% url 'contact'%}">Contact Us</a>
+                        <input type="text" placeholder="Search.." id=search name="search">
+                        <input type="submit" value="submit" name="ok" class="btn">
+                        </form>
+                        
+                        <a href="{% url 'login'%}" id='a1'>Login</a>
+                        <a href="{% url 'r'%}" id='r1'>sign up</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="container">
+                {% block content %}
+                <br><br><p class='p1'><h1><b><i> Welcome </i></b></h1></p><br>
+                
+               <!-- {% for search in b1%}
+                <h3>
+                    <li>
+                   <p style="color: white;"> {{search.bookname1}} | {{search.des1}} </p>
+                    </li>
+                </h3>
+                {% endfor %}-->
+               
+                    {%for i in b1%}
+                    <div class="main">
+                        <div class="card" style=" background-color: white;" >
+                            <img src="{{i.images.url}}" style="width:100%">
+                            <h1 style="color: black;" >{{i.bookname1}}</h1>
+                            <h3 class="price">---RS.</h3>
+                            <h4>{{i.des1}}</h4>
+                            <p><button >Add to Cart</button></p>
+                            <p><button >Buy now</button></p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endblock %}
+            
+            </div>    
+            <div class="fixed-footer">
+                <div class="container">Copyright &copy; 2016 Your Company</div>        
+            </div>
+        
+    </body>
+</html>
