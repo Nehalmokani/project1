@@ -1,0 +1,36 @@
+<html>
+    <body>
+        <style>
+            body
+            {
+                background-image: url(https://i.postimg.cc/dQZssk2d/1.jpg);
+            }
+            table
+            {
+                color: blue;
+                height: 300px;
+                width: 300px;
+                text-align: left;
+                
+                
+            }
+            #th1
+            {
+                text-align: center;
+                font-size: x-large;
+                
+            }
+        
+        </style>
+        <form method="GET">
+            <table border="2px" align="center">
+                <tr><th id="th1">Fectorial programme</th></tr>
+                <tr><td>
+            <input type="number" name='p' required  value="{{ no }}" placeholder="Enter no"></td></tr>
+           <tr><td> <input type="submit" value='submit'><h1>Ans is: {{ ans }}</h1></td></tr>
+        </table>
+        </form>
+
+        
+    </body>
+</html>
