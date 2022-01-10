@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>book</title>
+</head>
+<style>
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 60%;
+  height: 400px;
+  margin: 10px;
+  padding: 50px;
+  text-align: center;
+  font-family: arial;
+  display: inline-block;
+  
+}
+
+.price {
+  color: grey;
+  font-size: 22px;
+}
+
+.card button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 14px;
+}
+
+.card button:hover {
+  opacity: 0.7;
+}
+.main
+{
+   float: left;
+  
+   
+}
+</style>
+
+<body >
+    <h2 style="text-align:center">Product Card</h2>
+    {%for i in b%}
+    
+    <div class="main">   
+    <div class="card" >
+        <div class="bimg" ><img src="{{i.images.url}}" style="width:100%"></div>
+        <div class="bname"><h1>{{i.bookname1}}</h1></div>
+        <div class="bprice"><p class="price">---RS.</p></div>
+        <div class="bdes"><p>{{i.des1}}</p> </div>
+        <p><button >Add to Cart</button></p>
+        <p><button>Buy now</button></p>
+    </div>
+    <br><br><br>
+    </div>
+    
+    {% endfor %}
+
+
+</body>
+</html>
