@@ -1,0 +1,16 @@
+<form method ="GET">
+    <input type="number" step="0.00001" name="n1" value="{{ no1 }}" required placeholder="Enter Net price">
+    <!--<input type="number" step="0.00001" name="n2" value="{{ no2}}" required placeholder="Enter original price">-->
+    
+
+    <select name="n3">
+        <option value="gro">Grocery</option>
+        <option value="ele">Electonics</option>
+        <option value="clo">Cloths</option>
+        <option value="sta">Stationary</option>
+    </select>
+
+    <input type="submit" value="SUBMIT">
+    <h1> Gst is : {{ n4 }}</h1>
+    <h1>Answer is : {{ ans }}</h1>
+</form>
